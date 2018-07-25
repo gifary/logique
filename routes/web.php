@@ -13,4 +13,9 @@
 
 Route::get("/", "HomeController@index")->name("home");
 Route::post("/check-email", "HomeController@checkEmail")->name("check-email");
+Route::get("/get-memberships", "HomeController@getMemberShip")->name("get-memberships");
 Route::post("/save-data-user", "HomeController@saveData")->name("save-data-user");
+Route::get('login', 'HomeController@showLogin');
+
+// route to process the form
+Route::post('login', 'HomeController@doLogin')->name('login');
